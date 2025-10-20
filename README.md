@@ -1,2 +1,3 @@
-# hf_llm_course
-# hf_llm_course
+# HuggingFace LLM Course
+
+https://huggingface.co/learn/llm-course/chapter0/1
