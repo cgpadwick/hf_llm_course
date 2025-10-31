@@ -1,0 +1,78 @@
+# Python bytecode and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments / Python env managers
+.venv/
+venv/
+.env/
+.env*/
+.conda/
+.pyenv/
+.python-version
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Caches
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Coverage
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Logs
+logs/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/
+*-checkpoint.ipynb
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Data & model artifacts (keep large/generated files out of git)
+data/
+datasets/
+outputs/
+checkpoints/
+models/
+runs/
+wandb/
+lightning_logs/
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.tflite
+
+# Hugging Face related caches/artifacts
+huggingface/
+hf_cache/
+.cache/huggingface/
+
+# Tokenizer files often large/generated
+**/tokenizer.json
+
+# Local secrets (do not commit)
+*.secret
+*.secrets
+*.key
+*.pem
+*.crt
