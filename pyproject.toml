@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "hf-llm-course"
+version = "0.1.0"
+description = "Environment for the Hugging Face LLM course notebooks"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+# Core HF stack
+transformers = "*"
+datasets = "*"
+accelerate = "*"
+evaluate = "*"
+huggingface-hub = "*"
+# DL backend (pinned to CUDA 13.0 build from PyTorch index)
+torch = {version = "2.9.0+cu130", source = "pytorch-cu130"}
+# Numeric/data
+numpy = "*"
+pandas = "*"
+scipy = "*"
+scikit-learn = "*"
+# IO / utils
+requests = "*"
+tqdm = "*"
+python-dotenv = "*"
+psutil = "*"
+pyarrow = "*"
+# Model/Tokenizer extras commonly needed by HF
+safetensors = "*"
+sentencepiece = "*"
+tokenizers = "*"
+# Fine-tuning / SFT
+trl = "*"
+# Optional logger shim used in some notebooks (import trackio as wandb)
+trackio = "*"
+
+[[tool.poetry.source]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+priority = "supplemental"
+
+[tool.poetry.group.dev.dependencies]
+# Useful for running notebooks
+ipykernel = "*"
+ipywidgets = "*"
+# Uncomment if you prefer the classic notebook server locally
+# notebook = "*"
+# jupyterlab = "*"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
